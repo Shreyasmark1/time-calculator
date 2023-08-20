@@ -1,0 +1,19 @@
+<div class="card">
+    <div>
+        <div>
+            seconds : {{data.totalSeconds}}
+        </div>
+        <div>
+            minutes : {{data.approxMinutes}} approx.
+        </div>
+        <div>
+            hours : {{data.approxHours}} approx.
+        </div>
+        <div>
+            exact : {{data.exact}}
+        </div>
+    </div>
+    <div>
+        <mat-icon [ngStyle]="{'color':'red'}" (click)="onDelete()" aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+    </div>
+</div>

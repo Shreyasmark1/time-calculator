@@ -1,0 +1,20 @@
+.card {
+    border-radius: 0.2rem;
+    display: flex;
+    margin-top: 10px;
+    font-size: small;
+    padding-right: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: antiquewhite;
+    justify-content: center;
+}
+
+@media (min-width: 600px) {
+    .card {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+}

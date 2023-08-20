@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+  <span>Time calculator</span>
+</mat-toolbar>
+<br />
+<div class="content">
+  <mat-form-field class="sm-full-width" appearance="outline">
+    <mat-label>Minutes</mat-label>
+    <input #inputRef1 type="number" matInput (input)="onMinuteChange($event.target)">
+  </mat-form-field>
+  <mat-form-field class="sm-full-width" appearance="outline">
+    <mat-label>Seconds</mat-label>
+    <input #inputRef2 type="number" matInput (input)="onSecondChange($event.target)">
+  </mat-form-field>
+  <mat-form-field class="sm-full-width" appearance="outline">
+    <mat-label>Times</mat-label>
+    <input #inputRef3 type="number" matInput (input)="onTimesChange($event.target)">
+  </mat-form-field>
+  <div>
+    seconds : {{data.totalSeconds}}
+  </div>
+  <div>
+    minutes : {{data.approxMinutes}} approx.
+  </div>
+  <div>
+    hours : {{data.approxHours}} approx.
+  </div>
+  <div>
+    exact : {{data.exact}}
+  </div>
+  <br/>
+  <button mat-raised-button color="primary" (click)="submit(inputRef1, inputRef2, inputRef3)">Add to list</button>
+  <br/>
+  <br/>
+  <button mat-raised-button color="accent" (click)="showGrandTotal()">Show Grand total</button>
+  <br/>
+  <div *ngFor="let data of allRecords;let i = index" class="card">
+    <card [data]="data" [index]="i" (delete)="delete($event)"></card>
+    <!-- <div>
+      seconds : {{data.totalSeconds}}
+    </div>
+    <div>
+      minutes : {{data.approxMinutes}} approx.
+    </div>
+    <div>
+      hours : {{data.approxHours}} approx.
+    </div>
+    <div>
+      exact : {{data.exact}}
+    </div> -->
+  </div>
+</div>

@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+    .sm-full-width {
+        width: 95%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+}
